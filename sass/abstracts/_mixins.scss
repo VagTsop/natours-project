@@ -1,0 +1,8 @@
+@mixin clearfix {
+    &::after { // so every time we use the mixin ampersand will be replaced with the path of selectors
+        // How clearfix work?
+        content: ""; // specify the content propert otherwise a pseudo element will simply not appear. We want it to be empty because we dont to see this element on the page
+        display:table; // simple is the standard version of the clearfix - display table
+        clear:both; // property tha performs the clearfix - clear both floats left and right. It works whatever float we used left or right
+    }
+}
